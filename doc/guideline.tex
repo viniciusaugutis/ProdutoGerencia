@@ -60,7 +60,7 @@
 %% ====================================
 %% ====================================
 
-\lfoot{\footnotesize \texttt{Cabeamento estruturado} \textbullet ~Modelo de projeto}
+\lfoot{\footnotesize \texttt{Especificação do processo} }
 
 
 \cfoot{}
@@ -96,7 +96,7 @@
 %% ====================================
 %% ====================================
 
-\title{Modelo para Projeto de cabeamento estruturado}					% Title of your article goes here
+\title{Especificação do processo de gerenciamento de versões}					% Title of your article goes here
 
 %% ====================================
 
@@ -106,7 +106,7 @@
 
 \preauthor{\begin{flushleft}
 					\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkRed}}
-\author{Alexandre L'Erario, Fulano de Tal }  	% Author name goes here
+\author{Diego, Emerson, Jonata e Vinícius }  	% Author name goes here
 
 
 \postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black} 
@@ -133,9 +133,11 @@
 %% mude o resumo  do projeto
 %% ====================================
 %% ====================================
-\initial{E}\textbf{ste modelo exemplifica como um projeto de cabeamento estruturado deve ser elaborado. No projeto real,
-	esta seção deve indicar qual seria o propósito do projeto: reestruturar, criar uma estrura sem uma anterior, apresentar uma estrutura ficticia ou real  etc. Deve também conter sua cobertura (quais elementos este projeto aborda): Levantamento da planta física, Elaboração da planta lógica, Equipamentos passivos da rede (memorial descritivo), Levantamento de quantidade/custo, Plano de Certificação e orçamento.
-	No caso de projetos reais, deve conter também o escopo. No projeto real deve conter quais as atividades serão executadas e quais os responsáveis. Deve apresentar também as restrições que serão cumpridas e um possível acordo de nível de serviço (SLA).}
+\initial{A}\textbf{adoção de soluções modernas e com qualidade depende de um processo estabelecido que possa assegurar que o software a
+ser desenvolvido atenda às necessidades do cliente. Para que isso ocorra é necessário a
+definição de todos os processos envolvidos e como eles serão interligados.
+Este documento exemplifica o processo de desenvolvimento de software a ser aplicado 
+na empresa Software Supimpa Tecnologia (2ST), que deseja manter um processo para o gerenciamento de versões do software Klassic, que já se encontra no mercado. Para isso, o processo foi definido seguindo a Norma ISO/IEC 12207 e a prática DevOps. }
 
 %% ====================================
 \begin{figure}
@@ -166,190 +168,120 @@
 %% Inicio do texto
 %% ====================================
 %% ====================================
-\section{Introdução}
-Explique nesta primeira seção qual seria o perfil do caso. Perfil do cliente, quantidade de colaboradores, quantidade de equipamentos de TI atualmente.
+\section{Escopo}
 
-Indique também nesta seção o escopo do projeto.
-
-Apresente um overview do parque tecnológico do caso.
-\subsection{Benefícios}
-Explique quais seriam os benefícios provenientes após a execução deste projeto.
-
-
-\section{Estado atual}
-Aprente o estado atual da rede. Caso não tenha rede, desconsiderar esta seção.
-
-Caso tenha rede, deixe claro:
-\begin{itemize}
-	\item os passivos de rede atuais:path panels, cabos, etc..;
-	\item as principais reclamações dos usuários. Qual o principal motivo da reestruturação? Efetue uma pesquisa junto aos colaboradores para determinar quais problemas a rede apresenta.
-	\item Observações. Analise a rede e verifique se há estruturas que não se enquadram nas normas ou que indicam suspeita de problemas.
-\end{itemize}
-
-\section{Requisitos}
-Crie uma enumeração dos requisitos do projeto.
-
-\section{Usuários e Aplicativos}
-Explique nesta seção os usuários atuais e o perfil de crescimento, se por exemplo, há estimativa na evolução da empresa no que tange a quantidade de usuários, pontos de redes, equipamentos.
- 
-
-\subsection{Usuários}
-Crie uma relação da quantidade, perfil de usuários de seu projeto.
-
-\subsection{Aplicativos}
-Crie uma relação dos aplicativos e seus níveis críticos de uso.
+Este documento tem por objetivo definir a utilização da Baseline da aplicação Klassic da 
+empresa Software Supimpa Tecnologia (2ST)
+Através deste é possível o desenvolvedor se iterar sobre a aplicação e todas as
+tecnologias, ferramentas, códigos e demais necessário para utilizar e continuar o desenvolvimento da
+aplicação e suas novas versões.
+Neste documento também é abordado o processo de instalação do ambiente de
+desenvolvimento, assim caso necessite substituir e/ou adicionar outro equipamento sem ter problemas
+com este quesito. 
 
 
-\section{Estrutura predial existente}
-
-Explique aqui a planta física dos prédios
-Pode ser anexada, em escala ou não.
-
-Deve conter uma descrição geral, indicando a possível distância entre os pontos de rede e restrições de instalação.
-
-\section{Planta Lógica - Elementos estruturados}
-
-\subsection{Estado atual}
-Deve ter a planta atual, se for o caso
-
-\subsection{Topologia}
-Proposta futura, proposta após implantação.
-Deve conter o diagrama da rede. Atente-se a redundância  e ligações truncadas.
-Deve explicar todos termos e componentes utilizados nestas plantas. Por exemplo: entrance facility, work area, horizontal cabling, etc..
-
-Todos os elementos das figuras devem ser explicados. 
-Crie esboço da configuração dos racks e brackets. Explique cada um dos componentes. Você pode criar uma tabela contendo figuras dentro, ou criar uma tabela e incluí-la como imagem. Por exemplo, verifique a tabela \ref{tab1}.
-
-\input{tab1}
-
-\subsection{Encaminhamento}
-Eletrodutos, calhas, e qualquer material em que os cabos serão alojados/alocados.
-
-\subsection{Memorial descritivo}
-
-Relacione todos os equipamentos passivos que serão utilizados, tipo, fabricante, quantidade.
-
-\subsection{Identificação dos cabos}
-Explique como os cabos serão identificados em seu projeto. Coloque uma relação dos cabos instalados e identificados.
-
-\section{Implantação}
-Estabeleça um cronograma de implantação:
-Remoção de equipamentos existentes (destino para descarte), instalação dos condutores, instalação dos cabos, 
-identificação dos cabos, montagem dos racks, certificação, etc... Crie atividades e estabeleça o tempo de execução. Se for um projeto real, indique também quais os responsáveis pela execução do projeto e de cada uma das etapas.
-
-Defina marcas (e padrões) e fornecedores se for o caso. Atenção a contratados e subcontratados para a realização das atividades. Estabeleça a responsabilidade de execução da atividade e também da validação dela.
-
-Utilize algum software para gerear o cronograma. Excel,etc. O fundamental é dividir em etapas, descrever e estimar o tempo de cada uma delas.
-
-Segue uma relação de ferramentas:
-http://asana.com/, 
-https://trello.com/, 
-http://www.ganttproject.biz/, 
-http://www.orangescrum.org/. 
-
-\section{Plano de certificação}
-Quais seriam as etapas para a certificação? 
-Quais os locais e horários para execução da certificação na rede? Toda rede será certificada?
-Como os testes seriam executados?
-Quais relatórios de certificação serão (ou deveriam ser) entregues? 
-
-\section{Plano de manutenção}
-
-Revisões periódicas na rede, emissão de certificados para novos pontos.
-
-\subsection{Plano de expansão}
-Existe um plano de expansão? Quantos novos pontos poderão ser acrecidos na rede, antes de migração de equipamentos na camada 2? Se houver expansão, quais equipamentos deverão ser direcionados para as estremidades da rede? 
-
-\section{Risco}
-Apresentar os riscos do projeto
-
-\section{Orçamento}
-Crie uma relação de orçamentos baseado na seções anteriores.
-
-\section{Recomendações}
-Observações e recomendações para o cliente.
-
-\section{Referências bibliográficas}
-Utilize o mendley, o jabref ou diretamente o bibtex para gerenciar suas referências biliográficas. As referências são criadas automaticamente de acordo com o uso no texto.
-
-Exemplo: Redes de computadores, segundo \cite{t2013} é considerada..... Já \cite{kurose2010} apresenta uma versão...
-
-Analisando os pressupostos de \cite{ref3} e \cite{ref4} concluimos que....
+\section{Tecnologias e ferramentas utilizadas}
+\begin{enumerate}
+	\item Linguagem Java
+	\item NetBeans 8
+	\item PostgreSQL
+	\item Java Persistence API (JPA)
+	\item Astah
+\end{enumerate}
 
 
-\renewcommand\refname{} %%Referências bibliográficas}  
-\bibliographystyle{ieeetr}
-\bibliography{referencias}  
 
-%% ***********************************************************************
-%% === remover daqui =====================================================
-%% ***********************************************************************
-=================================================
-\section{Elementos textuais - Alguns exemplos}
+\section{Instalação}
+O projeto utiliza algumas tecnologias especificas (citadas
+anteriormente) para que possa funcionar. Além disso, faz necessários o download da Baseline direto do
+repositório e algumas configurações para que o mesmo inicialize.
+Abaixo será descrito o passo a passo para que o projeto seja iniciado em um novo computador,
+este com sistema operacional Linux, Windows ou MacOS. 
 
-Esta seção apresenta exemplos de elementos textuais. \textbf{Remova-a da versão final do texto}.
+Acesse o link do repositório do projeto, este hospedado no GitHub atualmente, onde nele você tem acesso a toda a documentação do sistema.
 
+https://github.com/viniciusaugutis/ProdutoGerencia
 
-\subsection{Colocar elementos em itens}
+Após o acesso, faça o download o projeto para sua máquina.
+Em seguida instale o Java (linguagem de programação utilizada). Segue o link para download: $https://www.java.com/pt_BR/download/$
 
-Texto antes da lista
+Também é preciso que se instale o PostgreSQL que é o banco de dados relacional utilizado na aplicação. Segue o link para download: https://www.postgresql.org/download/
 
-\begin{itemize}
-	\item First item in a list 
-	\item Second item in a list 
-	\item Third item in a list
-\end{itemize}
-
-\subsubsection{Uma subseção de terceiro nivel}
-
-Exemplo de uma subseção
-
-\subsection{Tabelas}
-
-Utilize o site http://www.tablesgenerator.com/ para elaborar as tabelas de seu trabalho.
-Para adicionar uma tabela utilize: a tag input, passando o arquivo da tabela como parametro
-
-\input{tab2}
-
-Dentro do arquivo você deve definir o label e pode utilizá-lo para referenciar. Exemplo:
-Na tab \ref{tab2} temos a relação de ....
+Também é preciso instalar a IDE utilizada para desenvolver o sistema, que no caso é o NetBeans 8. Segue o link para download:
+https://netbeans.org/downloads/
 
 
-Você também pode modificar a tabela manualmente, incluindo, por exemplo h! dentro de sua definição. Veja no exemplo tab2.tex
+\section{Versionamento}
 
-\subsection{Figuras}
-
-As figuras podem ser no formato PDF, JPG, PNG. Você pode referenciá-las da mesma maneira que tabelas. Exemplo: A figura \ref{fig1} apresenta.....
-
-Não se preocupe o local em que a figura será renderizada em seu texto. Preocupe-se em criar referência para ela, ou seja, toda figura e tabela deve conter pelo menos uma referência no texto.
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{fig1}
-\caption{Exemplo de figura com escala horizontal}
-\label{fig1}
-\end{figure}
-
-
-\begin{figure}
-	\centering
-	\includegraphics[]{fig2}
-	\caption{Exemplo de figura sem escala}
-	\label{fig2}
-\end{figure}
-
-Você pode rotacionar figuras também. Para isso utilize o parâmetro angle=-90. Repare que a escala da figura foi modificada pelo parametro height. Você também pode utilizar scale
-
-\begin{figure}
-	\centering
-	\includegraphics[height=\textwidth,angle=-90]{fig3}
-	\caption{Exemplo de figura rotacionada}
-	\label{fig3}
-\end{figure}
+O versionamento da aplicação é essencial para um projeto que tende a crescer a curto ou longo
+prazo. Ele registra alterações em um arquivo ou conjunto de arquivos ao longo do tempo para que você
+possa lembrar versões específicas mais tarde.
+Para o controle de versionamento da aplicação é utilizada a ferramenta GIT. Cada diretório de
+trabalho do Git é um repositório com um histórico completo e habilidade total de acompanhamento das
+revisões, não dependente de acesso a uma rede ou a um servidor central.
+Como plataforma de hospedagem de código para controle de versão e colaboração é utilizado o
+GitHub, que é um dos mais populares na atualidade. Ele inovou ao criar uma aplicação web dinâmica,
+com uma interface agradável e que conseguiu tornar a contribuição de software através um processo
+fácil e sociável.
+O git funciona em vários sistemas operacionais, como Mac, Windows e Linux. A primeira tarefa
+do desenvolvedor consiste em instalar o git na sua máquina de trabalho. A seguir segue o processo de
+instalação: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+Abaixo serão explicados alguns comandos básicos e iniciais do GIT para começar a trabalhar com
+o controle de versionamento.
 
 
-%% ***********************************************************************
-%% === ate aqui    =====  ================================================
-%% ***********************************************************************
+\begin{enumerate}
+	\item git init: iniciar um repositório git
+	\item git add nome-do-arquivo-incluindo-extensão: usado para adicionar um arquivo para controle
+	\item git status: mostra o estado do repositório, sendo quais arquivos estão fora do controle, quais
+	foram modificados e estão esperando por uma descrição de modificação
+	\item git commit -m "Mensagem do commit": comita arquivos do repositório, onde comitar é salvar
+	uma alteração de código-fonte em um sistema de versionamento.
+	\item git reset HEAD nome-do-arquivo: volta ao estágio anterior ao commit
+\end{enumerate}
+
+Abaixo serão explicados alguns comandos do GIT que o desenvolver deve saber para começar a
+trabalhar com a nossa aplicação.
+
+
+\begin{enumerate}
+	\item git clone url-do-projeto: faz um clone do nosso repositório remoto da aplicação para sua
+	máquina.
+	\item git pull: faz uma sincronização com os arquivos mais atualizados do repositório remoto.
+	\item git push origin nomeBranch: envia modificações da sua máquina local para o repositório
+	remoto
+	\item git checkout -b nome-do-branch: cria um branch no projeto. Os branchs são ramificações da
+	árvore central do seu projeto, onde eu posso criar vários branchs e após a realização da tarefa eu
+	posso juntar ele novamente ao branch principal.
+\end{enumerate}
+
+No link a seguir está a documentação completa do git e que se faz necessário o desenvolvedor
+aprender: https://git-scm.com/docs/git
+Para desenvolvimento da nossa aplicação o processo consiste através de pulls-requests. Um pullrequest
+permite que você informe as mudanças que você enviou para um repositório no GitHub. Uma
+vez que um pedido é aberto, você pode discutir e rever as possíveis mudanças com os colaboradores,
+para depois disso o revisor aceitar ou não o seu pedido.
+Para isso você pode usar o comando git request-pull 1.0.0 url-projeto master.
+O número do release varia de acordo com o que foi feito pelo desenvolvedor. Se foi consertado
+algum bug o último número deve ser incrementado (1.0.1). Se foi adicionada uma nova funcionalidade o
+segudo número deve ser incrementado (1.1.0). Se foi feita uma mudança que alterou a compatibilidade
+com a versão anterior da baseline, o primeiro número deve ser incrementado (2.0.0)
+
+\section{Padrões}
+
+Existem dois padrões de escrita:
+
+Snake Case: Define que as palavras são separadas com um caractere de sublinhado  e sem espaços,
+com a letra inicial de cada elemento geralmente em minúsculas dentro do composto. Exemplo: foo_bar.
+
+Camel Case: Define que as palavras compostas ou frase devem ser iniciadas com maiúsculas e unidas
+sem espaços. Exemplo: FooBar
+
+
+\section{Classes e métodos}
+Os usuários do processo são todos os envolvidos com o desenvolvimento de software. Dentre eles: desenvolvedor, gerente do projeto, operador de infraestrutura, analistas de sistemas e designers.
+
+
+
 
 \end{document}
