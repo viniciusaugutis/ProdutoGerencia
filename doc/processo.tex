@@ -60,7 +60,7 @@
 %% ====================================
 %% ====================================
 
-\lfoot{\footnotesize \texttt{Cabeamento estruturado} \textbullet ~Modelo de projeto}
+\lfoot{\footnotesize \texttt{Especificação do processo} }
 
 
 \cfoot{}
@@ -96,7 +96,7 @@
 %% ====================================
 %% ====================================
 
-\title{Modelo para Projeto de cabeamento estruturado}					% Title of your article goes here
+\title{Especificação do processo de gerenciamento de versões}					% Title of your article goes here
 
 %% ====================================
 
@@ -106,7 +106,7 @@
 
 \preauthor{\begin{flushleft}
 					\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkRed}}
-\author{Alexandre L'Erario, Fulano de Tal }  	% Author name goes here
+\author{Diego, Emerson, Jonata e Vinícius }  	% Author name goes here
 
 
 \postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black} 
@@ -133,9 +133,11 @@
 %% mude o resumo  do projeto
 %% ====================================
 %% ====================================
-\initial{E}\textbf{ste modelo exemplifica como um projeto de cabeamento estruturado deve ser elaborado. No projeto real,
-	esta seção deve indicar qual seria o propósito do projeto: reestruturar, criar uma estrura sem uma anterior, apresentar uma estrutura ficticia ou real  etc. Deve também conter sua cobertura (quais elementos este projeto aborda): Levantamento da planta física, Elaboração da planta lógica, Equipamentos passivos da rede (memorial descritivo), Levantamento de quantidade/custo, Plano de Certificação e orçamento.
-	No caso de projetos reais, deve conter também o escopo. No projeto real deve conter quais as atividades serão executadas e quais os responsáveis. Deve apresentar também as restrições que serão cumpridas e um possível acordo de nível de serviço (SLA).}
+\initial{A}\textbf{adoção de soluções modernas e com qualidade depende de um processo estabelecido que possa assegurar que o software a
+ser desenvolvido atenda às necessidades do cliente. Para que isso ocorra é necessário a
+definição de todos os processos envolvidos e como eles serão interligados.
+Este documento exemplifica o processo de desenvolvimento de software a ser aplicado 
+na empresa Software Supimpa Tecnologia (2ST), que deseja manter um processo para o gerenciamento de versões do software Klassic, que já se encontra no mercado. Para isso, o processo foi definido seguindo a Norma ISO/IEC 12207 e a prática DevOps. }
 
 %% ====================================
 \begin{figure}
@@ -167,110 +169,114 @@
 %% ====================================
 %% ====================================
 \section{Introdução}
-Explique nesta primeira seção qual seria o perfil do caso. Perfil do cliente, quantidade de colaboradores, quantidade de equipamentos de TI atualmente.
 
-Indique também nesta seção o escopo do projeto.
+Os processos de desenvolvimento de um software devem ser seguidos para que se tenha êxito no projeto. É necessário 
+estabilizar o desempenho de um ou mais subprocessos para determinar a habilidade do processo de gestão para alcançar os objetivos estabelecidos de qualidade e de desempenho de processo.
 
-Apresente um overview do parque tecnológico do caso.
-\subsection{Benefícios}
-Explique quais seriam os benefícios provenientes após a execução deste projeto.
+Os processos de gestão de requisitos gerenciam todos os requisitos
+recebidos ou gerados pelo projeto, incluindo os requisitos técnicos e os
+não técnicos assim como aqueles requisitos impostos ao projeto pela
+organização. O projeto adota passos apropriados para garantir que o conjunto
+acordado de requisitos é gerenciado para dar suporte ao planejamento
+e execução das necessidades do projeto.
 
+Para que os requisitos sejam cumpridos vários aspectos devem ser destacados e um que é 
+de suma importância é a garantia da qualidade do processo e das etapas de desenvolvimento. Assim, existem várias normas que podem ser aplicadas
+no processo, dentre elas a ITIL, CMMI, ISO29110, ISO12207, etc sendo que no processo em questão utilizamos bastante de características da ISO12207, que preza em ser uma abordagem de melhoria de processos que fornece às organizações elementos essenciais de processos eficazes.  Essa norma engloba processos e atividades aplicadas durante a aquisição e configuração dos serviços do sistema, de forma a melhorá-los.
+
+Além disso, também é utilizado no projeto o DevOps, que se caracteriza por ser uma filosofia que garante uma maior comunicação entre toda a equipe, principalmente entre os da infraestrutura com o desenvolvimento. Sob um modelo de DevOps, equipes de desenvolvimento e operações não são mais separadas em silos. Às vezes, essas duas equipes são combinadas em uma só, na qual os engenheiros trabalham durante o ciclo de vida inteiro do aplicativo, da fase de desenvolvimento e teste à fase de implantação e operações, e desenvolvem uma grande variedade de qualificações que não se limitam a uma única função. As equipes de controle de qualidade e segurança também podem se tornar mais integradas ao desenvolvimento e as operações e durante o ciclo de vida do aplicativo.
 
 \section{Estado atual}
-Aprente o estado atual da rede. Caso não tenha rede, desconsiderar esta seção.
+O estado atual da empresa é que o software Klassic se encontra no mercado e alguns clientes necessitam de customizações. Além disso, novas funcionalidades e versões precisam ser lançadas, já que o software é um sucesso de vendas e para continuar agradando a todos ele precisa 
+de novos recursos.
 
-Caso tenha rede, deixe claro:
-\begin{itemize}
-	\item os passivos de rede atuais:path panels, cabos, etc..;
-	\item as principais reclamações dos usuários. Qual o principal motivo da reestruturação? Efetue uma pesquisa junto aos colaboradores para determinar quais problemas a rede apresenta.
-	\item Observações. Analise a rede e verifique se há estruturas que não se enquadram nas normas ou que indicam suspeita de problemas.
-\end{itemize}
+Atualmente a empresa conta com um total de 10 desenvolvedores, sendo que visto o crescimento do software a tendência é que novos sejam contratados. Para que o tempo de adaptação e inserção na equipe não seja tão demorado, o processo precisa estar bem definido e claro para todos, além de um bom gerenciamento da equipe. Assim, a empresa solicita a elaboração e documentação um processo para o gerenciamento de versões, pois o arquiteto do software que era o grande responsável por gerir o processo não se encontra mais na empresa. 
+
+
+\section{Objetivo}
+Este documento retrata a forma que deve ser conduzida a gestão dos processos da empresa desde a sua concepção até o seu acompanhamento e melhoria do gerenciamento das versões do software.
 
 \section{Requisitos}
-Crie uma enumeração dos requisitos do projeto.
+Os requisitos necessários estão listados abaixo.
 
-\section{Usuários e Aplicativos}
-Explique nesta seção os usuários atuais e o perfil de crescimento, se por exemplo, há estimativa na evolução da empresa no que tange a quantidade de usuários, pontos de redes, equipamentos.
- 
+\begin{enumerate}
+	\item O sistema deve possibilitar o gerenciamento de cidades
+	\item Há clientes que necessitam de customizações
+	\item Há clientes que não necessitam de customizações
+	\item A otimização/nova funcionalidade poderá ser incorporada em todos os clientes
+	\item A equipe deve ser composta por no mínimo 10 desenvolvedores
+	\item O software deve utilizar um banco de dados relacional 
+	\item O software deve utilizar a linguagem de programação Java
+\end{enumerate}
 
-\subsection{Usuários}
-Crie uma relação da quantidade, perfil de usuários de seu projeto.
+\section{Usuários}
+Os usuários do processo são todos os envolvidos com o desenvolvimento de software. Dentre eles: desenvolvedor, gerente do projeto, operador de infraestrutura, analistas de sistemas e designers.
 
-\subsection{Aplicativos}
-Crie uma relação dos aplicativos e seus níveis críticos de uso.
+\section{Detalhadamento do processo }
+O processo proposto para o gerenciamento de versões utiliza a norma ISO/IEC 12207 em conjunto com a prática DevOps.
+A norma aplica os conceitos do controle da Qualidade Total, agregando em todas as suas atividades a preocupação com a qualidade. Sua arquitetura foi desenvolvida para ser um conjunto de processos inter-relacionados, de modo que seja flexível e adaptável.
 
+A norma ISO/IEC 12207 estabelece uma arquitetura de alto nível do ciclo de vida de software que é construída a partir de um conjunto de processos e seus inter-relacionamentos. Ela divide as classes do processo em três tipos:
 
-section{Estrutura predial existente}
+\begin{enumerate}
+	\item Processos fundamentais: necessário para a execução do desenvolvimento do software. Inclui a aquisição, fornecimento,
+	desenvolvimento, operação e manutenção.
+	\item Processo de apoio: auxiliam o processo, como a garantia da qualidade mas não são fundamentais. Inclui a documentação,
+	aderência de configuração, garantia de qualidade, verificação, validação, revisão conjunta, auditoria, resolução de problema,
+	usabilidade e contrato.
+	\item Processos organizacionais: auxiliam na organização e gerência do processo. Inclui a gerência, treinamento, infraestrutura e melhoria.
+\end{enumerate}
 
-Explique aqui a planta física dos prédios
-Pode ser anexada, em escala ou não.
+O DevOps foi utilizado por ser uma prática que vem ganhando espaço ultimamente e como o principal objetivo da empresa é o gerenciamento de versões e novas funcionalidades, essa filosofia se encaixa muito bem no processo. Ela garante que a equipe opere em alta velocidade para que se possa trazer inovações para os clientes mais rapidamente, adaptar-se melhor a mercados dinâmicos e tornar-se mais eficiente na geração de resultados comerciais. 
 
-Deve conter uma descrição geral, indicando a possível distância entre os pontos de rede e restrições de instalação.
-
-section{Planta Lógica - Elementos estruturados}
-
-\subsection{Estado atual}
-Deve ter a planta atual, se for o caso
-
-\subsection{Topologia}
-Proposta futura, proposta após implantação.
-Deve conter o diagrama da rede. Atente-se a redundância  e ligações truncadas.
-Deve explicar todos termos e componentes utilizados nestas plantas. Por exemplo: entrance facility, work area, horizontal cabling, etc..
-
-Todos os elementos das figuras devem ser explicados. 
-Crie esboço da configuração dos racks e brackets. Explique cada um dos componentes. Você pode criar uma tabela contendo figuras dentro, ou criar uma tabela e incluí-la como imagem. Por exemplo, verifique a tabela \ref{tab1}.
+Além disso, ela preza pela entrega e otimização contínua, com entregas rápidas, onde quanto mais rápido ocorrer o lançamento de novos recursos e a correção de erros, maior será a sua agilidade para responder às necessidades dos clientes e criar vantagem competitiva. 
 
 
+Na figura abaixo é possível visualizar o processo que vem sendo executado na empresa e como os integrantes se relacionam com as atividades.
 
-\subsection{Encaminhamento}
-Eletrodutos, calhas, e qualquer material em que os cabos serão alojados/alocados.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.8]{processo-final(bpmn)}
+\end{figure}
 
-\subsection{Memorial descritivo}
+As etapas definidas para o processo foram:
 
-Relacione todos os equipamentos passivos que serão utilizados, tipo, fabricante, quantidade.
+ \begin{description}
+	\item[Levantamento dos requisitos]: Etapa onde os requisitos e novas funcionalidades para a nova versão do software são levantadas e analisadas. Como o DevOps preza por uma comunicação maior de toda a equipe participam tanto os gerentes do projeto, desenvolvedores, designers, operadores de infraestrutura, etc.
+	\item[Verificação e Validação]: Os requisitos discutidos são organizados e validados pela equipe para ser implementado.
+	\item[Definição do processo organizacional] São relatadas as atividades de cada integrante e do desenvolvedor, tanto para o desenvolvimento de um novo software ou manutenções. Define atribuições genéricas e as responsabilidades do gerente em relação ao ciclo de vida do software. Descreve as atividades básicas para a criação e manutenção de uma infraestrutura adequada.
+	\item[Gerenciamento de configurações]: Controle e manutenção da integridade dos itens do software ao longo de seu ciclo de vida.
+	\item[Gerenciamento integrado do produto]: Garantir a integração de todos da equipe e que garanta que o produto de software esteja em conformidade com os requisitos e os planos estabelecidos.
+	\item[Treinamento Organizacional]:  Aplicação de treinamento da norma ISO/IEC 12207, mostrando que a norma é adaptável entre seus processos como que com outras normas. Também é realizado uma dinâmica para fixar e estimular a prática DevOps.
+	\item[Produção dos requisitos levantados]: Implementação das novas funcionalidades e geração de uma nova versão do software.
+	\item[Análise de decisão e garantia da qualidade]: Determina se o software ou requisito atende ao uso específico proposto e verificação da garantia de qualidade do produto.
+	\item[Organização da equipe e otimização contínua]: Etapa necessária caso a análise de decisão da equipe não seja positiva. Utilizado mecanismos para a resolução de problemas ou não conformidades por meio de um processo fechado utilizando-se de ações corretivas e também a organização da equipe para as correções.
+	\item[Auditoria e revisão conjunta]: Prepara o ambiente para a realização de auditorias com ênfase no cumprimento dos requisitos de produtos e serviços. Além disso, define as atividades para avaliação da situação e de produtos, visando o uso e aceitação do cliente.
+	\item[Geração de relatório final]: Geração das funcionalidades desenvolvidas, do andamento do processo e pontos positivos e negativos relatados durante o desenvolvimento. E também ocorre distribuição aos interessados sobre os registros e documentação produzida durante a execução.
+\end{description}
 
-subsection{Identificação dos cabos}
-Explique como os cabos serão identificados em seu projeto. Coloque uma relação dos cabos instalados e identificados.
-
-section{Implantação}
-Estabeleça um cronograma de implantação:
-Remoção de equipamentos existentes (destino para descarte), instalação dos condutores, instalação dos cabos, 
-identificação dos cabos, montagem dos racks, certificação, etc... Crie atividades e estabeleça o tempo de execução. Se for um projeto real, indique também quais os responsáveis pela execução do projeto e de cada uma das etapas.
-
-Defina marcas (e padrões) e fornecedores se for o caso. Atenção a contratados e subcontratados para a realização das atividades. Estabeleça a responsabilidade de execução da atividade e também da validação dela.
-
-Utilize algum software para gerear o cronograma. Excel,etc. O fundamental é dividir em etapas, descrever e estimar o tempo de cada uma delas.
-
-Segue uma relação de ferramentas:
-http://asana.com/, 
-https://trello.com/, 
-http://www.ganttproject.biz/, 
-http://www.orangescrum.org/. 
-
-section{Plano de certificação}
-Quais seriam as etapas para a certificação? 
-Quais os locais e horários para execução da certificação na rede? Toda rede será certificada?
-Como os testes seriam executados?
-Quais relatórios de certificação serão (ou deveriam ser) entregues? 
-
-section{Plano de manutenção}
-
-Revisões periódicas na rede, emissão de certificados para novos pontos.
-
-\subsection{Plano de expansão}
-Existe um plano de expansão? Quantos novos pontos poderão ser acrecidos na rede, antes de migração de equipamentos na camada 2? Se houver expansão, quais equipamentos deverão ser direcionados para as estremidades da rede? 
 
 \section{Risco}
-Apresentar os riscos do projeto
+Os riscos apresentados são:
 
-\section{Orçamento}
-Crie uma relação de orçamentos baseado na seções anteriores.
+\begin{enumerate}
+	\item A não aceitação pelo cliente das novas funcionalidades desenvolvidas.
+	\item A equipe não se adequar ao novo processo estabelecido
+	\item O tempo e cronograma estabelecidos não serem cumpridos
+	\item Perdas financeiras
+	\item Aumento dos custos
+	\item Perda de mercado
+\end{enumerate}
 
-\section{Recomendações}
-Observações e recomendações para o cliente.
+
+section{Orçamento}
+O orçamento 
+
+\section{Plano de manutenção}
+Para evitar problemas na empresa deve ser definido um programa de manutenção com métodos preventivos estabelecidas e com qualidade, caso algum equipamento ou servidor venha a apresentar problemas. 
+O plano consistem em monitorar as partes do sistema regularmente e efetuar backups periódicos. Também é necessário ajustar ou trocar componentes em períodos predeterminados, testar os equipamentos com frequência e garantir um programa de prevenção tanto para equipe de desenvolvimento quanto para os clientes.
 
 \section{Referências bibliográficas}
-Utilize o mendley, o jabref ou diretamente o bibtex para gerenciar suas referências biliográficas. As referências são criadas automaticamente de acordo com o uso no texto.
 
 Exemplo: Redes de computadores, segundo \cite{t2013} é considerada..... Já \cite{kurose2010} apresenta uma versão...
 

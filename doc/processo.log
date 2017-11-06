@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.5)  5 NOV 2017 13:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.5)  6 NOV 2017 19:13
 entering extended mode
 **./processo.tex
 (processo.tex
@@ -1033,10 +1033,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+Overfull \hbox (1.17511pt too wide) in paragraph at lines 136--141
+\OT1/cmr/bx/n/12 es-ta-be-le-cido que possa as-se-gu-rar que o soft-ware a ser 
+de-sen-vol-vido atenda
+ []
+
 <utfpr.jpeg, id=1, 97.36375pt x 35.13126pt>
 File: utfpr.jpeg Graphic file (type jpg)
  <use utfpr.jpeg>
-Package pdftex.def Info: utfpr.jpeg used on input line 143.
+Package pdftex.def Info: utfpr.jpeg used on input line 145.
 (pdftex.def)             Requested size: 97.3635pt x 35.13115pt.
  [1
 
@@ -1048,10 +1053,10 @@ Class scrartcl Warning: incompatible usage of \@ssect detected.
 (scrartcl)              from within a non compatible caller, that does not
 (scrartcl)              \scr@s@ct@@nn@m@ locally.
 (scrartcl)              This could result in several error messages on input li
-ne 151.
+ne 153.
 
 Package tocbasic Info: character protrusion at lof deactivated on input line 15
-1.
+3.
 (processo.lof)
 \tf@lof=\write3
 \openout3 = `processo.lof'.
@@ -1063,10 +1068,10 @@ Class scrartcl Warning: incompatible usage of \@ssect detected.
 (scrartcl)              from within a non compatible caller, that does not
 (scrartcl)              \scr@s@ct@@nn@m@ locally.
 (scrartcl)              This could result in several error messages on input li
-ne 154.
+ne 156.
 
 Package tocbasic Info: character protrusion at lot deactivated on input line 15
-4.
+6.
 (processo.lot)
 \tf@lot=\write4
 \openout4 = `processo.lot'.
@@ -1075,15 +1080,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 159.
-
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 159.
-
-[2
+ [2
 
 ]
 
@@ -1092,19 +1089,19 @@ Class scrartcl Warning: incompatible usage of \@ssect detected.
 (scrartcl)              from within a non compatible caller, that does not
 (scrartcl)              \scr@s@ct@@nn@m@ locally.
 (scrartcl)              This could result in several error messages on input li
-ne 161.
+ne 163.
 
 Package tocbasic Info: character protrusion at toc deactivated on input line 16
-1.
+3.
 (processo.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 13.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 13.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1117,33 +1114,38 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
  [3
 
-]
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 184.
- [4
+] [4
 
 ]
+[5] <processo-final(bpmn).png, id=28, 630.85687pt x 283.81032pt>
+File: processo-final(bpmn).png Graphic file (type png)
 
-LaTeX Warning: Reference `tab1' on page 5 undefined on input line 221.
+<use processo-final(bpmn).png>
+Package pdftex.def Info: processo-final(bpmn).png used on input line 239.
+(pdftex.def)             Requested size: 504.68619pt x 227.04855pt.
 
-
-Overfull \hbox (84.47485pt too wide) in paragraph at lines 244--249
-[]\OT1/cmr/m/n/12 (-20) Segue uma relac~ao de fer-ra-men-tas: http://asana.com
-/, https://trello.com/, http://www.ganttproject.biz/,
+Overfull \hbox (49.44202pt too wide) in paragraph at lines 239--240
+ [][] 
  []
 
-[5]
+[6 <./processo-final(bpmn).png>]
+Overfull \hbox (4.62627pt too wide) in paragraph at lines 251--252
+[]\OT1/cmr/m/n/12 (-20) : Im-ple-mentac~ao das no-vas fun-ci-o-na-li-da-des e 
+gerac~ao
+ []
 
-LaTeX Warning: Citation `t2013' on page 6 undefined on input line 275.
+[7]
+
+LaTeX Warning: Citation `t2013' on page 8 undefined on input line 281.
 
 
-LaTeX Warning: Citation `kurose2010' on page 6 undefined on input line 275.
+LaTeX Warning: Citation `kurose2010' on page 8 undefined on input line 281.
 
 
-LaTeX Warning: Citation `ref3' on page 6 undefined on input line 277.
+LaTeX Warning: Citation `ref3' on page 8 undefined on input line 283.
 
 
-LaTeX Warning: Citation `ref4' on page 6 undefined on input line 277.
+LaTeX Warning: Citation `ref4' on page 8 undefined on input line 283.
 
 (processo.bbl
 
@@ -1159,28 +1161,35 @@ LaTeX Warning: Empty `thebibliography' environment or \BreakBibliography
                before end of `thebibliography' environment on input line 3.
 
 )
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 304.
 
-LaTeX Warning: Reference `tab2' on page 6 undefined on input line 315.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 304.
 
-[6]
 
-LaTeX Warning: Reference `fig1' on page 7 undefined on input line 322.
+LaTeX Warning: Reference `tab2' on page 8 undefined on input line 321.
 
 
+LaTeX Warning: Reference `fig1' on page 8 undefined on input line 328.
+
+[8] 
 AED: lastpage setting LastPage
-[7] (processo.aux)
+[9] (processo.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 11542 strings out of 493323
- 182789 string characters out of 3139069
- 504274 words of memory out of 3000000
- 14781 multiletter control sequences out of 15000+200000
- 25448 words of font info for 89 fonts, out of 3000000 for 9000
+ 11564 strings out of 493323
+ 183017 string characters out of 3139069
+ 505297 words of memory out of 3000000
+ 14782 multiletter control sequences out of 15000+200000
+ 25938 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,12n,54p,8821b,438s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,12n,54p,8821b,435s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts
@@ -1192,9 +1201,9 @@ cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 /Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on processo.pdf (7 pages, 147955 bytes).
+Output written on processo.pdf (9 pages, 182566 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 24582 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 24587 words of extra memory for PDF output out of 24883 (max. 10000000)
 
