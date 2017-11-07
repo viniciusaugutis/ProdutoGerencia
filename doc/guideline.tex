@@ -60,7 +60,7 @@
 %% ====================================
 %% ====================================
 
-\lfoot{\footnotesize \texttt{Especificação do processo} }
+\lfoot{\footnotesize \texttt{Guideline da aplicação Klassic} }
 
 
 \cfoot{}
@@ -96,7 +96,7 @@
 %% ====================================
 %% ====================================
 
-\title{Especificação do processo de gerenciamento de versões}					% Title of your article goes here
+\title{Guideline da aplicação Klassic}					% Title of your article goes here
 
 %% ====================================
 
@@ -128,16 +128,6 @@
 
 
 
-%% ====================================
-%% ====================================
-%% mude o resumo  do projeto
-%% ====================================
-%% ====================================
-\initial{A}\textbf{adoção de soluções modernas e com qualidade depende de um processo estabelecido que possa assegurar que o software a
-ser desenvolvido atenda às necessidades do cliente. Para que isso ocorra é necessário a
-definição de todos os processos envolvidos e como eles serão interligados.
-Este documento exemplifica o processo de desenvolvimento de software a ser aplicado 
-na empresa Software Supimpa Tecnologia (2ST), que deseja manter um processo para o gerenciamento de versões do software Klassic, que já se encontra no mercado. Para isso, o processo foi definido seguindo a Norma ISO/IEC 12207 e a prática DevOps. }
 
 %% ====================================
 \begin{figure}
@@ -147,20 +137,6 @@ na empresa Software Supimpa Tecnologia (2ST), que deseja manter um processo para
 
 \vspace{3cm}
 \centerline{\textit{\textbf{\today}}}
-
-\clearpage
-    \renewcommand*\listfigurename{Lista de figuras}
-\listoffigures
-
-\renewcommand*\listtablename{Lista de tabelas}
-\listoftables
-
-
-
-
-\clearpage
-\renewcommand{\contentsname}{Sumário}
-\tableofcontents
 \clearpage
 
 %% ====================================
@@ -187,6 +163,8 @@ com este quesito.
 	\item PostgreSQL
 	\item Java Persistence API (JPA)
 	\item Astah
+	\item Git
+	\item Github
 \end{enumerate}
 
 
@@ -203,7 +181,8 @@ Acesse o link do repositório do projeto, este hospedado no GitHub atualmente, o
 https://github.com/viniciusaugutis/ProdutoGerencia
 
 Após o acesso, faça o download o projeto para sua máquina.
-Em seguida instale o Java (linguagem de programação utilizada). Segue o link para download: $https://www.java.com/pt_BR/download/$
+Em seguida instale o Java (linguagem de programação utilizada). Segue o link para download: 
+https://www.java.com/ptBR/download/
 
 Também é preciso que se instale o PostgreSQL que é o banco de dados relacional utilizado na aplicação. Segue o link para download: https://www.postgresql.org/download/
 
@@ -216,6 +195,7 @@ https://netbeans.org/downloads/
 O versionamento da aplicação é essencial para um projeto que tende a crescer a curto ou longo
 prazo. Ele registra alterações em um arquivo ou conjunto de arquivos ao longo do tempo para que você
 possa lembrar versões específicas mais tarde.
+
 Para o controle de versionamento da aplicação é utilizada a ferramenta GIT. Cada diretório de
 trabalho do Git é um repositório com um histórico completo e habilidade total de acompanhamento das
 revisões, não dependente de acesso a uma rede ou a um servidor central.
@@ -223,6 +203,7 @@ Como plataforma de hospedagem de código para controle de versão e colaboraçã
 GitHub, que é um dos mais populares na atualidade. Ele inovou ao criar uma aplicação web dinâmica,
 com uma interface agradável e que conseguiu tornar a contribuição de software através um processo
 fácil e sociável.
+
 O git funciona em vários sistemas operacionais, como Mac, Windows e Linux. A primeira tarefa
 do desenvolvedor consiste em instalar o git na sua máquina de trabalho. A seguir segue o processo de
 instalação: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
@@ -262,24 +243,40 @@ permite que você informe as mudanças que você enviou para um repositório no 
 vez que um pedido é aberto, você pode discutir e rever as possíveis mudanças com os colaboradores,
 para depois disso o revisor aceitar ou não o seu pedido.
 Para isso você pode usar o comando git request-pull 1.0.0 url-projeto master.
+
 O número do release varia de acordo com o que foi feito pelo desenvolvedor. Se foi consertado
 algum bug o último número deve ser incrementado (1.0.1). Se foi adicionada uma nova funcionalidade o
 segudo número deve ser incrementado (1.1.0). Se foi feita uma mudança que alterou a compatibilidade
 com a versão anterior da baseline, o primeiro número deve ser incrementado (2.0.0)
+
+\section {Bibliotecas}
+
+A aplicação utiliza bibliotecas como bootstrap e também para o mapeamento objeto-relacional do banco de dados foi utilizado o hibernate, juntamente com o JPA.
+
+\section {Gerenciamento das dependências}
+Para gerenciamento das dependências do nosso projeto utilizamos o Maven. O Maven é uma ferramenta desenvolvida pela Apache, ela serve para gerenciar as dependências e automatizar seus builds.
+
+Para alterar alguma dependência basta acessar o arquivo pom.xml, que se encontra na raiz da aplicação, e nele é possível visualizar todas as dependências do projeto.
 
 \section{Padrões}
 
 Existem dois padrões de escrita:
 
 Snake Case: Define que as palavras são separadas com um caractere de sublinhado  e sem espaços,
-com a letra inicial de cada elemento geralmente em minúsculas dentro do composto. Exemplo: foo_bar.
+com a letra inicial de cada elemento geralmente em minúsculas dentro do composto. 
 
 Camel Case: Define que as palavras compostas ou frase devem ser iniciadas com maiúsculas e unidas
-sem espaços. Exemplo: FooBar
+sem espaços. 
+
+O nome dos models e controllers devem ser escritos no padrão Camel Case.
+Todos os nomes de arquivos seguem o padrão Snake Case.
+O nome dos atributos deve seguir o padrão Snake Case
 
 
-\section{Classes e métodos}
-Os usuários do processo são todos os envolvidos com o desenvolvimento de software. Dentre eles: desenvolvedor, gerente do projeto, operador de infraestrutura, analistas de sistemas e designers.
+\section {Estrutura}
+A estrutura do projeto está dividido da seguinte forma: Um arquivo chamado persistence.xml na pasta METAINF que contém dados de acesso a banco de dados e o seu usuário.
+
+Também existe o pacote br, onde deve ficar o código fonte da sua aplicação. Dentro dele o pacote data e o gui. No gui é onde ficarão as suas classes de layout da aplicação. Já no data é onde ficam todas as classes de modelo de sua aplicação e de entidades.
 
 
 
